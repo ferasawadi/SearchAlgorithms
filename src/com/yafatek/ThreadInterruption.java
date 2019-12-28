@@ -1,0 +1,1 @@
+package com.yafatek;public class ThreadInterruption {	public static void main(String[] args) {		Thread thread = new Thread(() -> {			while (!Thread.currentThread().isInterrupted()) {				// While not interrupted.				// do Some thing.				System.out.println("STEP");			}		});		thread.start();		thread.interrupt();	}}
